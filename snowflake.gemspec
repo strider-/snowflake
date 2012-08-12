@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = "Generate a UUID column on ActiveRecord models"
   s.email = "striderIIDX@gmail.com"
   s.extra_rdoc_files = ["README.rdoc", "lib/snowflake.rb"]
-  s.files = ["README.rdoc", "Rakefile", "lib/snowflake.rb", "Manifest", "snowflake.gemspec"]
+  s.files = ["README.rdoc", "Rakefile", "lib/snowflake.rb", "snowflake.gemspec"]
   s.homepage = "http://github.com/strider-/snowflake"
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Snowflake", "--main", "README.rdoc"]
   s.require_paths = ["lib"]
