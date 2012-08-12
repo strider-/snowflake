@@ -8,4 +8,4 @@ Yeah I know, it might as well be MyFirstGem.git, right?  Because it is.
     snowflake :column
   end
 
-That's it!  The column has to exist and be a string.
+That's it!  The column has to exist and be a string.  On before_create, the column will be assigned a new UUID automatically.
