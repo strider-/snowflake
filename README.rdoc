@@ -4,11 +4,8 @@ Rails gem for making each ActiveRecord a beautiful and unique snowflake by givin
 Yeah I know, it might as well be MyFirstGem.git, right?  Because it is.
 
 == Usage
-
-= SYNOPSIS
   class Model < ActiveRecord::Base
     snowflake :column
   end
-  END
 
 That's it!  The column has to exist and be a string.
