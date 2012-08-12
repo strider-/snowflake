@@ -3,9 +3,18 @@
 Rails gem for making each ActiveRecord a beautiful and unique snowflake by giving it a UUID.
 Yeah I know, it might as well be MyFirstGem.git, right?  Because it is.
 
+== Options
+  option       description                   default
+  ------       ------------                  ------
+  :disable     turns off uuid generation     (false)
+  :no_dashes   removes dashes from the uuid  (false)
+  :upcase      uuid is capitalized           (false)
+
+All options are boolean values.
+
 == Usage
   class Model < ActiveRecord::Base
-    snowflake :column
+    snowflake :column_name, { :no_dashes => true, :upcase => true }
   end
 
 That's it!  The column has to exist and be a string.  On before_create, the column will be assigned a new UUID automatically.

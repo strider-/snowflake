@@ -13,7 +13,7 @@ module Snowflake
 
   module ClassMethods
     def snowflake(*args, &block)
-      options = { :disable => false }
+      options = { :disable => false, :no_dashes => false, :upcase => false }
       options.merge!(args.pop) if args.last.kind_of? Hash
 			
       unless options[:disable]
@@ -23,7 +23,10 @@ module Snowflake
               record.ensure_unique(name, &block)
             else
               record.ensure_unique(name) do 
-                SecureRandom.uuid
+                uuid = SecureRandom.uuid
+                uuid.gsub!("-", "") if options[:no_dashes]
+                uuid.upcase! if options[:upcase]
+                uuid
               end
             end
           end
