@@ -1,0 +1,4 @@
+= Snowflake
+
+Rails gem for making each ActiveRecord a beautiful and unique snowflake by giving it a UUID.
+Yeah I know, it might as well be MyFirstGem.git, right?  Because it is.
